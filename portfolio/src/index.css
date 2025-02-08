@@ -23,6 +23,13 @@
   font-style: normal;
 }
 
+.dm-sans-text-bold {
+  font-family: "DM Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
 .dm-sans-text-italic {
   font-family: "DM Sans", serif;
   font-optical-sizing: auto;
