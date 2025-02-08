@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Button = ({children, onClick, variant }) => {
+const Button = ({children, onClick, variant, className}) => {
     const variantClasses = {
-        primary: 'bg-blueSecondary text-white px-[49px] py-[7px] rounded-full dm-sans-text-bold text-[24px] hover:bg-transparent hover:text-blueSecondary border border-blueSecondary transition-all',
-        secondary: 'bg-transparent border border-blueSecondary text-blueSecondary px-[49px] py-[7px] rounded-full dm-sans-text-bold text-[24px] hover:bg-blueSecondary hover:text-white transition-all',
+        primary: `bg-blueSecondary text-white px-[49px] py-[7px] rounded-full dm-sans-text-bold text-[24px] hover:bg-transparent hover:text-blueSecondary border border-blueSecondary transition-all ${className}`,
+        secondary: `bg-transparent border border-blueSecondary text-blueSecondary px-[49px] py-[7px] rounded-full dm-sans-text-bold text-[24px] hover:bg-blueSecondary hover:text-white transition-all ${className}`,
     }
 
   return (

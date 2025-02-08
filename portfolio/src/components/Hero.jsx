@@ -7,8 +7,11 @@ const Hero = () => {
     <div className='bg-primary w-full h-page flex justify-center items-center relative'>
         <div className='h-full w-full flex mx-auto'>
             {/* Banner */}
-            <div className='h-full bg-red-200 w-[35%]'>
+            <div className='h-full bg-red-200 w-[35%] relative'>
                 <img src="/images/hero-banner.png" className='h-full w-full contain' />
+                <div className='absolute top-[10px] left-[31px] text-[40px] text-white dm-serif-display-regular-italic'>
+                    Minsel
+                </div> 
             </div>
 
             {/* Hero */}
@@ -17,17 +20,17 @@ const Hero = () => {
                     {/* Header */}
                     <div className='flex gap-6 items-center mb-[22px]'>
                         <div>
-                            <img src="images/hero.png" className='w-[100px] h-[100px]' alt="" />   
+                            <img src="images/hero.png" className='w-[100px] h-[100px]' alt="" />  
                         </div>
                         <div className='flex flex-col'>
-                            <h1 className='font-DM-header text-[40px] text-blueSecondary'>Jasmin Ivy Fedilo</h1>
+                            <h1 className='dm-serif-display-regular-italic text-[40px] text-blueSecondary'>Jasmin Ivy Fedilo</h1>
                             <p className='font-DM-text text-[26px] text-lightGray'>UI/UX Designer</p>
                         </div>
                     </div>
                     {/* Description */}
                     <div>
-                        <p className='text-lightGray text-2xl mb-10'>Sophomore at Polytechnic University of the Philippines (PUP) pursuing a BS in Computer Engineering with a strong foundation in Python.</p>
-                        <p className='text-lightGray text-2xl'>As an aspiring front-end web developer, I'm passionate about crafting intuitive and visually appealing user interfaces. I'm currently honing my skills in UI/UX design while actively exploring additional programming languages to broaden my technical expertise. I'm committed to continuous learning and growth, eager to apply my technical knowledge and creative mindset to contribute to innovative projects and drive exceptional digital experiences.</p>
+                        <p className='text-lightGray dm-sans-text-regular text-2xl mb-10'>Sophomore at <span className='dm-sans-text-500-italic'>Polytechnic University of the Philippines (PUP)</span> pursuing a <span className='dm-sans-text-500-italic'>BS in Computer Engineering </span> with a strong foundation in Python.</p>
+                        <p className='text-lightGray dm-sans-text-regular text-2xl'>As an aspiring front-end web developer, I'm passionate about crafting intuitive and visually appealing user interfaces. I'm currently honing my skills in UI/UX design while actively exploring additional programming languages to broaden my technical expertise. I'm committed to continuous learning and growth, eager to apply my technical knowledge and creative mindset to contribute to innovative projects and drive exceptional digital experiences.</p>
 
                         {/* Buttons */}
                         <div className='flex gap-[14px] mt-[33px]'>

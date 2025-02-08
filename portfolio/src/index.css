@@ -10,23 +10,55 @@
 }
 
 .dm-serif-display-regular-italic {
-  font-family: "DM Serif Display", serif;
-  font-weight: 400;
+  /* color: #57808E; */
+  font-family: "DM Serif Display";
+  /* font-size: 40px; */
   font-style: italic;
+  font-weight: 400;
+  line-height: normal;
 }
 
 
+
+
 .dm-sans-text-regular {
-  font-family: "DM Sans", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
+  /* color: #7C7C7C; */
+  font-family: "DM Sans";
+  /* font-size: 24px; */
   font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.dm-sans-text-500 {
+  /* color: #7C7C7C; */
+  font-family: "DM Sans";
+  /* font-size: 24px; */
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.dm-sans-text-500-italic {
+  /* color: #7C7C7C; */
+  font-family: "DM Sans";
+  /* font-size: 24px; */
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .dm-sans-text-bold {
   font-family: "DM Sans", serif;
   font-optical-sizing: auto;
   font-weight: 600;
+  font-style: normal;
+}
+
+.dm-sans-text-xl {
+  font-family: "DM Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
   font-style: normal;
 }
 
