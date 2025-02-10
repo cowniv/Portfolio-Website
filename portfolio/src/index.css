@@ -74,3 +74,36 @@
     /* background: url(<path-to-image>) lightgray 50% / cover no-repeat; */
     box-shadow: 12px 12px 24px 0px rgba(0, 0, 0, 0.25);
 }
+
+
+.line-height-40 {
+  line-height: 40px;
+}
+
+
+/* border */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.box {
+  border: 2px solid blue;  /* Blue border */
+  padding: 20px;
+  position: relative;
+}
+
+.connector {
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background: blue;
+  left: 50%;
+  top: 100%;
+}
+
+.text-shadow-blue {
+  text-shadow: 12px 12px 24px #2F4C70;
+}

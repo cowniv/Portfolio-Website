@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './Button'
 
 const Projects = () => {
 
@@ -54,7 +55,10 @@ const Projects = () => {
                 </div>
               </div>
             ))}
-            </div>
+          </div>
+          <div className='flex w-full justify-center'>
+            <Button variant={'primary'} className={'text-[24px] mt-[63px] py-[7px px-[34px]'}>Explore more {">"}</Button>
+          </div>
         </div>
       </div>
     </div>
