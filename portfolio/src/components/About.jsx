@@ -53,7 +53,8 @@ const About = () => {
 
 
   return (
-    <div className='bg-primary w-full h-page flex justify-center items-center relative'>
+    <div className='flex justify-center items-center bg-primary'>
+    <div className='bg-primary h-page flex justify-center items-center relative'>
       {/* Certifications and Education */}
       <div className='h-full bg-white w-[35%] px-[39px] pt-[51px] pb-[58px]'>
         {/* Certifications */}
@@ -118,6 +119,7 @@ const About = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   )
 }
