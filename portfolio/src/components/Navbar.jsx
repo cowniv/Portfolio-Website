@@ -54,7 +54,8 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white' : 'bg-transparent'} py-5`}>
-      <div className="w-full flex justify-between items-center px-9">
+      {/* Desktop */}
+      <div className="w-full hidden lg:flex justify-between items-center px-9">
         {/* Left side - Logo */}
         <div className={`text-[40px] ${isScrolled ? 'text-lightGray' : 'text-white'} dm-serif-display-regular-italic`}>
           Minsel
@@ -98,6 +99,57 @@ const Navbar = () => {
               scrollToSection('skills');
             }} 
             className={`cursor-pointer hover:opacity-80 ${activeSection === 'skills' ? 'text-blue-500' : (isScrolled ? 'text-gray-700' : 'text-lightGray')}`}
+          >
+            SKILLS
+          </a>
+        </div>
+      </div>
+      
+      {/* Mobile */}
+      <div className="w-full flex lg:hidden justify-between items-center px-[16px]">
+        {/* Left side - Logo */}
+        <div className={`text-[20px] ${isScrolled ? 'text-lightGray' : 'text-white'} dm-serif-display-regular-italic`}>
+          Minsel
+        </div> 
+        {/* Right side - Navigation links */}
+        <div className="w-1/2 flex justify-end gap-[14px] font-light dm-sans-text-regular text-[12px]">
+          <a 
+            href="#hero" 
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('hero');
+            }} 
+            className={`cursor-pointer hover:opacity-80 ${activeSection === 'hero' ? 'text-blue-700' : (isScrolled ? 'text-gray-700' : 'text-white')}`}
+          >
+            HOME
+          </a>
+          <a 
+            href="#about" 
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('about');
+            }} 
+            className={`cursor-pointer hover:opacity-80 ${activeSection === 'about' ? 'text-blue-700' : (isScrolled ? 'text-gray-700' : 'text-white')}`}
+          >
+            ABOUT
+          </a>
+          <a 
+            href="#projects" 
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('projects');
+            }} 
+            className={`cursor-pointer hover:opacity-80 ${activeSection === 'projects' ? 'text-blue-700' : (isScrolled ? 'text-gray-700' : 'text-white')}`}
+          >
+            PROJECTS
+          </a>
+          <a 
+            href="#skills" 
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('skills');
+            }} 
+            className={`cursor-pointer hover:opacity-80 ${activeSection === 'skills' ? 'text-blue-700' : (isScrolled ? 'text-gray-700' : 'text-white')}`}
           >
             SKILLS
           </a>
