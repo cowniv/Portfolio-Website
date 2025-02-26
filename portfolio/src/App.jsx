@@ -5,15 +5,26 @@ import './App.css'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Connect from './components/Connect'
+import Navbar from './components/Navbar'
 
 function App() {
   return (
     <div className=''>
-      <Hero />
-      <About />
-      <Projects/>
-      <Skills />
-      <Connect />
+      <Navbar />
+      <div className="">
+        <div id="hero">
+          <Hero />
+        </div>
+        <div id="about">
+          <About />
+        </div>
+        <div id="projects">
+          <Projects />
+        </div>
+        <div id="skills">
+          <Skills />
+        </div>
+      </div>
     </div>
   )
 }

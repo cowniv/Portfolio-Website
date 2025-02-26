@@ -9,9 +9,6 @@ const Hero = () => {
             {/* Banner */}
             <div className='h-full bg-red-200 w-[35%] relative'>
                 <img src="/images/hero-banner.png" className='h-full w-full contain' />
-                <div className='absolute top-[10px] left-[31px] text-[40px] text-white dm-serif-display-regular-italic'>
-                    Minsel
-                </div> 
             </div>
 
             {/* Hero */}
