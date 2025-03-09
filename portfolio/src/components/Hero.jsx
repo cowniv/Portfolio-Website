@@ -4,12 +4,12 @@ import Button from './Button'
 
 const Hero = () => {
   return (
-    <div className='bg-primary w-full h-page flex justify-center items-center relative'>
+    <div className='bg-primary w-full h-screen flex justify-center items-center relative'>
         
         {/* Mobile */}
-        <div className='md:hidden flex flex-col w-full'>
+        <div className='md:hidden flex h-full flex-col w-full'>
             {/* Banner with Minsel overlay */}
-            <div className='w-full h-[200px] mt-[-285px] bg-blue-500 relative'>
+            <div className='w-full h-[175px] bg-blue-500 relative'>
             <img 
                 src="/images/hero-banner.png" 
                 className='h-full w-full object-cover' 
@@ -20,13 +20,13 @@ const Hero = () => {
             {/* Content section */}
             <div className='w-full px-6 py-8 bg-[#f7f4f1]'>
             {/* Header */}
-            <div className='flex flex-col items-center mb-6'>
-                <div className='mb-4'>
-                <img src="images/hero.png" className='w-[80px] h-[80px] rounded-full' alt="Profile" />  
+            <div className='flex items-center gap-4 mb-6'>
+                <div className=''>
+                    <img src="images/hero.png" className='w-[50px] h-[50px] rounded-full' alt="Profile" />  
                 </div>
-                <div className='flex flex-col text-center'>
-                <h1 className='dm-serif-display-regular-italic text-[20px] text-blueSecondary'>Jasmin Ivy C. Fedilo</h1>
-                <p className='font-DM-text text-[12px] text-lightGray'>UI/UX Designer</p>
+                <div className='flex flex-col'>
+                    <h1 className='dm-serif-display-regular-italic text-[20px] text-blueSecondary'>Jasmin Ivy C. Fedilo</h1>
+                    <p className='font-DM-text text-[12px] text-lightGray'>UI/UX Designer</p>
                 </div>
             </div>
             
@@ -40,21 +40,21 @@ const Hero = () => {
                 </p>
 
                 {/* Buttons */}
-                <div className='flex gap-[14px] mt-6'>
-                <Button variant='primary' className={'px-[25px] text-[12px]'}>Resume</Button>
-                <Button variant='secondary' className={'px-[25px] py-[10px] text-[12px]'}>Email</Button>
+                <div className='flex gap-2 mt-6'>
+                    <Button variant='primary' className={'px-[15px] text-[12px] rounded-full'}>Resume</Button>
+                    <Button variant='secondary' className={'px-[15px] text-[12px] rounded-full'}>Email</Button>
                 </div>
             </div>
             </div>
 
             {/* Footer mobile */}
-            <div className='bg-white w-full py-6 px-4'>
-            <div className='flex flex-col items-center justify-center gap-4'>
-                <div className='dm-sans-text-italic text-lightGray text-lg text-center'>
-                Want to collaborate or just say hi? Reach out!
+            <div className='bg-white h-[75px] w-full py-6 px-4 justify-end flex'>
+            <div className='w-[190px] flex items-center gap-3'>
+                <div className='w-[170px]  dm-sans-text-italic text-lightGray text-sm '>
+                    Want to collaborate or just say hi? Reach out!
                 </div>
-                <div className='border rounded-full border-lightGray w-[39px] h-[39px] flex justify-center items-center hover:bg-primary hover:scale-125 transition-transform'>
-                <img src="/images/arrow_forward.png" alt="" className='text-black' />
+                <div className='border rounded-full border-lightGray w-[24px] h-[24px] flex justify-center items-center hover:bg-primary hover:scale-125 transition-transform'>
+                    <img src="/images/arrow_forward.png" alt="" className='text-black w-[24px] h-[24px]' />
                 </div>
             </div>
             </div>
@@ -63,7 +63,7 @@ const Hero = () => {
         {/* Tablet */}
         <div className='hidden md:flex lg:hidden flex-col w-full'>
             {/* Banner with Minsel overlay */}
-            <div className='w-full h-[300px] mt-[-300px] bg-blue-500 relative'>
+            <div className='w-full h-[300px] bg-blue-500 relative'>
             <img 
                 src="/images/hero-banner.png" 
                 className='h-full w-full object-cover' 
@@ -121,8 +121,8 @@ const Hero = () => {
             </div>
 
             {/* Hero */}
-            <div className='relative h-full w-[65%] pt-5 flex flex-1 flex-col'>
-                <div className='flex px-[57px] flex-col pt-[188px]'>
+            <div className='relative h-full w-[65%] flex flex-1 flex-col'>
+                <div className='flex px-[57px] flex-col justify-center h-full'>
                     {/* Header */}
                     <div className='flex gap-6 items-center mb-[22px]'>
                         <div>
@@ -140,17 +140,20 @@ const Hero = () => {
 
                         {/* Buttons */}
                         <div className='flex gap-[14px] mt-[33px]'>
-                            <Button variant='primary'>Resume</Button>
-                            <Button variant='secondary'>Email</Button>
+                            <Button variant='primary' className={'text-2xl'}>Resume</Button>
+                            <Button variant='secondary' className={'text-2xl'}>Email</Button>
                         </div>
                     </div>
                 </div>
+                
                 <div className='absolute bottom-0 bg-white h-[160px] flex-1 w-full '>
-                    <div className='w-full py-[44px] flex items-center justify-end pr-[40px]'>
-                        <div className='dm-sans-text-italic text-lightGray text-xl w-[226px]'>Want to Collaborate? or say just hi? Reach out</div>
-                        <div className='border border-lightGray h-[104px] w-[1px] mr-[40px] ml-[10px]'/>
-                        <div className='border rounded-full border-lightGray w-[39px] h-[39px] justify-center flex items-center hover:bg-primary hover:scale-125 transition-transform'>
-                            <img src="/images/arrow_forward.png" alt="" className='text-black' />
+                    <div className='h-full  justify-center items-center w-full'>
+                        <div className='w-full flex items-center justify-end pr-[40px] h-full'>
+                            <div className='dm-sans-text-italic text-lightGray text-xl w-[226px]'>Want to Collaborate? or say just hi? Reach out</div>
+                            <div className='border border-lightGray h-[104px] w-[1px] mr-[40px] ml-[10px]'/>
+                            <div className='border rounded-full border-lightGray w-[39px] h-[39px] cursor-pointer justify-center flex items-center hover:bg-primary hover:scale-125 transition-transform'>
+                                <img src="/images/arrow_forward.png" alt="" className='text-black' />
+                            </div>
                         </div>
                     </div>
                 </div>
