@@ -4,6 +4,27 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
 
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+  const [heightThreshold, setHeightThreshold] = useState(false);
+
+  useEffect(() => {
+      const handleResize = () => {
+          setWindowHeight(window.innerHeight);
+      };
+  
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+      if (windowHeight > 900) {
+          setHeightThreshold(true);
+      } else {
+          setHeightThreshold(false);
+      }
+  }, [windowHeight]);
+
+
   useEffect(() => {
     const handleScroll = () => {
       // Update background based on scroll
@@ -53,7 +74,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white' : 'bg-transparent'} py-5`}>
+    <nav className={`${heightThreshold ? 'fixed' : 'fixed'}  top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white' : 'bg-transparent'} py-5`}>
       {/* Desktop */}
       <div className="w-full hidden lg:flex justify-between items-center px-9">
         {/* Left side - Logo */}

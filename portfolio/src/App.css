@@ -1,0 +1,7 @@
+/* Media query for screen sizes between 1024px and 1250px */
+@media (min-width: 1024px) and (max-width: 1400px) {
+    /* Add your styles here */
+    .hero {
+        margin-top: 80px;
+    }
+  }
