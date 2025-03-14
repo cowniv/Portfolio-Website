@@ -62,7 +62,7 @@ const Navbar = () => {
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      const offset = 100; // adjust this value as needed (in pixels)
+      const offset = 50; // adjust this value as needed (in pixels)
       const sectionPosition = section.getBoundingClientRect().top;
       const offsetPosition = sectionPosition + window.pageYOffset - offset;
       
@@ -76,7 +76,7 @@ const Navbar = () => {
   return (
     <nav className={`${heightThreshold ? 'fixed' : 'fixed'}  top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white' : 'bg-transparent'} py-5`}>
       {/* Desktop */}
-      <div className="w-full hidden lg:flex justify-between items-center px-9">
+      <div className={`w-full hidden ${isScrolled ? 'h-[30px]' : ''} lg:flex justify-between items-center px-9 transition-transform`}>
         {/* Left side - Logo */}
         <div className={`text-[40px] ${isScrolled ? 'text-lightGray' : 'text-white'} dm-serif-display-regular-italic`}>
           Minsel

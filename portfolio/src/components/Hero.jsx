@@ -26,7 +26,7 @@ const Hero = () => {
     console.log(heightThreshold)
 
   return (
-    <div className={`bg-primary w-full flex justify-center items-center relative`}>
+    <div className={`bg-primary w-full flex justify-center items-center relative max-w-[2800px] mx-auto`}>
         
         {/* Mobile */}
         <div className='md:hidden h-screen flex flex-col w-full'>

@@ -15,9 +15,9 @@ function App() {
         <div id="hero">
           <Hero />
         </div>
-        {/* <div id="about">
+        <div id="about">
           <About />
-        </div> */}
+        </div>
         {/* <div id="projects">
           <Projects />
         </div>
