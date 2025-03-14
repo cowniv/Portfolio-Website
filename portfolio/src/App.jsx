@@ -21,10 +21,9 @@ function App() {
         <div id="projects">
           <Projects />
         </div>
-        {/*
         <div id="skills">
           <Skills />
-        </div> */}
+        </div>
       </div>
     </div>
   )
