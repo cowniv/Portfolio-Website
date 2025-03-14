@@ -29,7 +29,7 @@ const Hero = () => {
     <div className={`bg-primary w-full flex justify-center items-center relative max-w-[2800px] mx-auto`}>
         
         {/* Mobile */}
-        <div className='md:hidden h-screen flex flex-col w-full'>
+        <div className='md:hidden h-full flex flex-col w-full'>
             {/* Banner with Minsel overlay */}
             <div className='w-full h-[175px] bg-blue-500 relative'>
             <img 
@@ -123,14 +123,14 @@ const Hero = () => {
 
             {/* Footer mobile */}
             <div className='bg-white h-[75px] w-full py-6 px-4 justify-end flex'>
-            <div className='w-[190px] flex items-center gap-3'>
-                <div className='w-[170px]  dm-sans-text-italic text-lightGray text-sm '>
-                    Want to collaborate or just say hi? Reach out!
+                <div className='w-[190px] flex items-center gap-3'>
+                    <div className='w-[170px]  dm-sans-text-italic text-lightGray text-sm '>
+                        Want to collaborate or just say hi? Reach out!
+                    </div>
+                    <div className='border rounded-full border-lightGray w-[24px] h-[24px] flex justify-center items-center hover:bg-primary hover:scale-125 transition-transform'>
+                        <img src="/images/arrow_forward.png" alt="" className='text-black w-[24px] h-[24px]' />
+                    </div>
                 </div>
-                <div className='border rounded-full border-lightGray w-[24px] h-[24px] flex justify-center items-center hover:bg-primary hover:scale-125 transition-transform'>
-                    <img src="/images/arrow_forward.png" alt="" className='text-black w-[24px] h-[24px]' />
-                </div>
-            </div>
             </div>
         </div>
 
