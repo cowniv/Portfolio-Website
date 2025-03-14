@@ -68,7 +68,7 @@ const About = () => {
                 </li>
               ))}
             </ul>
-            <Button variant={'primary'} className={'w-[179px] flex justify-center text-nowrap'}>
+            <Button variant={'primary'} className={'w-[200px] flex justify-center text-xl text-nowrap'}>
               View More
             </Button>
           </div>
