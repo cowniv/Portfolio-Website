@@ -1,7 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Button from './Button'
+import Drawer from '@mui/material/Drawer';
 
 const About = () => {
+  const [drawer, setDrawer] = useState(false)
+
+  const toggleDrawer = () => {
+    setDrawer(!drawer)
+  }
+
   const certs = [
     'Lorem ipsum',
     'Lorem ipsum',
@@ -37,25 +44,49 @@ const About = () => {
 
   const exps = [
     {
-      title: 'TITLE',
-      description: 'Lorem ipsum dolor sit amet. Non minus esse eum voluptas voluptas qui consequatur voluptatum sit dolores quaerat ut vitae obcaecati id accusantium laboriosam. '
+      title: 'Google Developer Groups on Campus PUP (GDG PUP)',
+      subtitle: 'UI/UX Co-Lead | October 2023 – Present',
+      description: [
+        'Spearheaded UI/UX initiatives, leading design projects and guiding a team of 130+ members.',
+        'Organized and facilitated multiple Study Jams and workshops, equipping members with practical UI/UX skills and industry insights',
+        'Collaborated with developers and designers to create innovative user-centered projects and improve community engagement.'
+      ]
     },
     {
-      title: 'TITLE',
-      description: 'Lorem ipsum dolor sit amet. Non minus esse eum voluptas voluptas qui consequatur voluptatum sit dolores quaerat ut vitae obcaecati id accusantium laboriosam. '
+      title: 'PUP Hygears',
+      subtitle: 'UI/UX Consultant | September 2023 – Present',
+      description: [
+        "Provided UI/UX expertise in the development of the PUP Hygears website, ensuring accessibility, usability, and a visually appealing interface.",
+        "Supported the organization’s mission of enhancing research recognition and technological innovation at PUP.",
+        "Contributed to projects that aim to tackle real-world issues through innovation and collaboration in engineering and technology."
+      ]
     },
     {
-      title: 'TITLE',
-      description: 'Lorem ipsum dolor sit amet. Non minus esse eum voluptas voluptas qui consequatur voluptatum sit dolores quaerat ut vitae obcaecati id accusantium laboriosam. '
+      title: 'PUP Hygears',
+      subtitle: 'UI/UX Consultant | September 2023 – Present',
+      description: [
+        "Provided UI/UX expertise in the development of the PUP Hygears website, ensuring accessibility, usability, and a visually appealing interface.",
+        "Supported the organization’s mission of enhancing research recognition and technological innovation at PUP.",
+        "Contributed to projects that aim to tackle real-world issues through innovation and collaboration in engineering and technology."
+      ]
+    },
+    {
+      title: 'PUP Hygears',
+      subtitle: 'UI/UX Consultant | September 2023 – Present',
+      description: [
+        "Provided UI/UX expertise in the development of the PUP Hygears website, ensuring accessibility, usability, and a visually appealing interface.",
+        "Supported the organization’s mission of enhancing research recognition and technological innovation at PUP.",
+        "Contributed to projects that aim to tackle real-world issues through innovation and collaboration in engineering and technology."
+      ]
     },
   ]
 
 
 
   return (
-    <div className='flex justify-center items-center bg-primary'>
+    <div className='h-max flex relative justify-center items-center bg-primary max-w-[2800px] mx-auto w-full'>
       {/* Desktop */}
-      <div className='hidden lg:flex bg-primary h-page justify-center items-center relative'>
+      <div className='hidden lg:flex w-full bg-primary h-page justify-center items-center relative'>
         {/* Certifications and Education */}
         <div className='h-full bg-white w-[35%] px-[39px] pt-[51px] pb-[58px]'>
           {/* Certifications */}
@@ -99,26 +130,39 @@ const About = () => {
         </div>
 
         {/* Experience */}
-        <div className='w-[65%] relative h-full pt-[51px] pl-[61px] pr-[56px] flex flex-1 flex-col'>
-          <div>
+        <div className='w-[65%] relative min-h-full h-max pt-[51px] pl-[61px] pr-[56px] flex-1'>
+          <div className='flex flex-col'>
             <h1 className='dm-serif-display-regular-italic text-blueSecondary text-[40px] mb-[16px]'>Experiece</h1>
             <div>
-            {exps.map((exp, index) => (
+            {exps.slice(0, 2).map((exp, index) => (
               <div>
                 <div className='border border-lightGray'/>
-                <div key={index} className='flex pt-[7px] pb-[12px]'>
-                  <div className='dm-sans-text-regular text-[24px] text-blueSecondary w-[122px]'>
+                <div key={index} className='flex flex-col pt-[7px] pb-[12px]'>
+                  <div className='dm-sans-text-bold text-[24px] text-blueSecondary'>
                     {exp.title}
                   </div>
-                  <div className='dm-sans-text-regular pl-[43px] text-[24px] text-lightGray'>
-                    {exp.description}
+                  <div className='text-blueSecondary text-[24px] dm-sans-text-regular'>
+                    <span className='dm-sans-text-italic'>{exp.subtitle.split('|').splice(0, 1)} </span>| {exp.subtitle.split('|').splice(1, 1)}
                   </div>
+                  <ul className='dm-sans-text-regular list-inside list-disc text-[24px] text-lightGray mt-2 line-height-38'>
+                    {exp.description.map((desc, index) => (
+                      <li key={index} className='line-height-38 text-[#7C7C7C]'>
+                        {desc}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}
             <div className='border border-lightGray'/>
             </div>
           </div>
+            {/* View more button */}
+            <div className='absolute left-1/2 bottom-0 transform -translate-x-1/2 pb-[51px]'>
+              <Button onClick={toggleDrawer} variant={'primary'} className={'w-[200px] flex justify-center text-xl text-nowrap'}>
+                View More
+              </Button>
+            </div>
         </div>
       </div>
 
@@ -257,6 +301,48 @@ const About = () => {
           </div>
         </div>
       </div>
+
+
+        <Drawer
+          anchor='right'
+          open={drawer}
+          onClose={toggleDrawer}
+        >
+        <div className='w-max bg-[#C7D9E5] relative min-h-full h-max pt-[51px] pl-[61px] pr-[56px] flex-1'>
+          <div className='flex flex-col'>
+            <h1 className='dm-serif-display-regular-italic text-blueSecondary text-[40px] mb-[16px]'>Experiece</h1>
+            <div className='overflow-y-scroll h-[80vh] scroll-container'>
+            {exps.slice(2).map((exp, index) => (
+              <div className='max-w-[1040px]'>
+                <div className='border border-lightGray'/>
+                <div key={index} className='flex flex-col pt-[7px] pb-[12px]'>
+                  <div className='dm-sans-text-bold text-[24px] text-blueSecondary'>
+                    {exp.title}
+                  </div>
+                  <div className='text-blueSecondary text-[24px] dm-sans-text-regular'>
+                    <span className='dm-sans-text-italic'>{exp.subtitle.split('|').splice(0, 1)} </span>| {exp.subtitle.split('|').splice(1, 1)}
+                  </div>
+                  <ul className='dm-sans-text-regular list-inside list-disc text-[24px] text-lightGray mt-2 line-height-38'>
+                    {exp.description.map((desc, index) => (
+                      <li key={index} className='line-height-38 text-[#7C7C7C]'>
+                        {desc}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+            <div className='border border-lightGray'/>
+            </div>
+          </div>
+            {/* View more button */}
+            <div className='absolute left-1/2 bottom-0 transform -translate-x-1/2 pb-[51px]'>
+              <Button onClick={toggleDrawer} variant={'primary'} className={'w-[200px] flex justify-center text-xl text-nowrap'}>
+                Back
+              </Button>
+            </div>
+        </div>
+      </Drawer>
     </div>
   )
 }
