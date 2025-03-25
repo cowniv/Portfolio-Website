@@ -141,3 +141,7 @@
 .scroll-container::-webkit-scrollbar-thumb:hover {
   background: #777;
 }
+
+.project-gradient {
+  background: linear-gradient(227deg, rgba(217, 217, 217, 0.00) 26.07%, #2F4C70 100%);
+}
