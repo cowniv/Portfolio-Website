@@ -162,8 +162,25 @@ const Hero = () => {
 
                         {/* Buttons */}
                         <div className='flex gap-[14px] mt-[33px]'>
-                            <Button variant='primary' className={'text-2xl'}>Resume</Button>
-                            <Button variant='secondary' className={'text-2xl'}>Email</Button>
+                            <Button variant='primary' className={'text-2xl'}>
+                            <a 
+                                href="/JasminFediloCV.pdf" 
+                                download="JasminFediloCV.pdf" 
+                                className="block w-full h-full text-center"
+                            >
+                                Resume
+                            </a>
+                            </Button>
+                            <Button variant='secondary' className='text-2xl'>
+                                <a
+                                    href="https://mail.google.com/mail/?view=cm&fs=1&to=jasminfedilo.pup@gmail.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block w-full h-full text-center"
+                                >
+                                    Email
+                                </a>
+                            </Button>
                         </div>
                     </div>
                 </div>
@@ -174,7 +191,9 @@ const Hero = () => {
                             <div className='dm-sans-text-italic text-lightGray text-xl w-[226px]'>Want to Collaborate? or say just hi? Reach out</div>
                             <div className={`border border-lightGray ${heightThreshold ? 'h-[125px]' : 'h-[60px]'} w-[1px] mr-[40px] ml-[10px]`}/>
                             <div className='border rounded-full border-lightGray w-[39px] h-[39px] cursor-pointer justify-center flex items-center hover:bg-primary hover:scale-125 transition-transform'>
-                                <img src="/images/arrow_forward.png" alt="" className='text-black' />
+                                <a href="https://www.linkedin.com/in/jasmin-ivy-fedilo-a5ab83247/" target="_blank">
+                                    <img src="/images/arrow_forward.png" alt="" className='text-black' />
+                                </a>
                             </div>
                         </div>
                     </div>
