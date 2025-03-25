@@ -34,7 +34,7 @@ const Projects = () => {
           Alertech is an integrated fire detection and alert solution that reduces response time and potential fire hazards. The system consists of a mobile app, a website, and an IoT device, tracking temperature, humidity, and smoke levels to provide real-time alerts to users and fire authorities in case of potential fire hazards.
         </p>
 
-        <h2>UI/UX Design Process</h2>
+        <p>UI/UX Design Process</p>
         <p>
           As the lead UI/UX designer, I focused on creating a cohesive and user-friendly experience for both web and mobile platforms. The design process followed a user-centered approach, ensuring accessibility and ease of use.
         </p>
