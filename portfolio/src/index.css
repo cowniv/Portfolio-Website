@@ -84,6 +84,10 @@
   line-height: 28px;
 }
 
+.line-height-38 {
+  line-height: 38px;
+}
+
 
 /* border */
 .container {
@@ -110,4 +114,30 @@
 
 .text-shadow-blue {
   text-shadow: 12px 12px 24px #2F4C70;
+}
+
+/* Apply to the container you want to scroll */
+.scroll-container {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  scrollbar-color: #999 #f0f0f0; /* Scroll thumb and track */
+}
+
+/* For Webkit browsers like Chrome, Safari */
+.scroll-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 5px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 5px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #777;
 }
