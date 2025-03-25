@@ -62,21 +62,22 @@ const About = () => {
       ]
     },
     {
-      title: 'PUP Hygears',
-      subtitle: 'UI/UX Consultant | September 2023 – Present',
+      title: 'ICPEP Student Edition - PUP Manila (Institute of Computer Engineers of the Philippines – Student Edition)',
+      subtitle: 'Founding Member, Media & Publications | October 2024 – Present',
       description: [
-        "Provided UI/UX expertise in the development of the PUP Hygears website, ensuring accessibility, usability, and a visually appealing interface.",
-        "Supported the organization’s mission of enhancing research recognition and technological innovation at PUP.",
-        "Contributed to projects that aim to tackle real-world issues through innovation and collaboration in engineering and technology."
+        "Played a key role in establishing the organization’s branding and identity, ensuring a professional and cohesive visual theme",
+        "Managed media and publication efforts, helping create promotional materials and engaging content to boost community awareness.",
+        "Assisted in planning events and initiatives, fostering a supportive environment for computer engineering students."
       ]
     },
     {
-      title: 'PUP Hygears',
-      subtitle: 'UI/UX Consultant | September 2023 – Present',
+      title: 'Organizations & Affiliations',
+      subtitle: '(Active Member & Event Participant)',
       description: [
-        "Provided UI/UX expertise in the development of the PUP Hygears website, ensuring accessibility, usability, and a visually appealing interface.",
-        "Supported the organization’s mission of enhancing research recognition and technological innovation at PUP.",
-        "Contributed to projects that aim to tackle real-world issues through innovation and collaboration in engineering and technology."
+        "AWS Cloud Club PUP – Engaging in cloud computing learning sessions and networking events.",
+        "PUP The Programmers’ Guild – Participating in software development activities.",
+        "PUP Microsoft Student Community – Attending tech-related events, workshops.",
+        "JBECP – Junior Blockchain Education Consortium of the Philippines (PUP Manila Chapter) – Exploring blockchain technology and its applications through discussions.",
       ]
     },
   ]
