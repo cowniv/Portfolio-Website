@@ -10,11 +10,9 @@ const About = () => {
   }
 
   const certs = [
-    'Lorem ipsum',
-    'Lorem ipsum',
-    'Lorem ipsum',
-    'Lorem ipsum',
-    'Lorem ipsum',
+    'UI/UX Design Fundamentals',
+    'AI Fundamentals',
+    'Data Literacy',
   ]
   const educs = [
     {

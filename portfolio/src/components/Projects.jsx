@@ -98,52 +98,35 @@ const Projects = () => {
     {
       title: 'ARDUINO DAY',
       description: `
-      <div>
-        <h1>Alertech &ndash; Fire Detection &amp; Alert System</h1>
-        <p>
-          Alertech is an integrated fire detection and alert system designed to help reduce response time and potential fire hazards. The system consists of a mobile app, a website, and an IoT device, tracking temperature, humidity, and smoke levels to provide real-time alerts to users and fire authorities in case of potential fire hazards.
-        </p>
+        <div>
+          <p>
+            Arduino Day is a global celebration of Arduino&rsquo;s birthday, bringing together enthusiasts, developers, and innovators to share their experiences and learn more about the open-source platform. The event includes workshops, talks, and showcases from communities around the world.
+          </p>
 
-        <h2>UI/UX Design Process</h2>
-        <p>
-          As the lead UI/UX designer, I focused on creating a seamless and user-friendly experience for both web and mobile platforms. The design process followed a user-centered approach, ensuring accessibility and ease of use.
-        </p>
+          <p>UI/UX Design Process</p>
+          <p>
+            As the UI/UX Co-Lead, I played a key role in designing an interactive and informative website for the event. The design process involved:
+          </p>
 
-        <ol>
-          <li>
-            <strong>User Research &amp; Problem Definition</strong>
-            <ul>
-              <li>Conducted research on existing fire safety systems and their pain points.</li>
-              <li>Refined user personas, focusing on homeowners, building managers, and emergency responders.</li>
-            </ul>
-          </li>
-          <li>
-            <strong>Wireframing &amp; Prototyping</strong>
-            <ul>
-              <li>Developed low-fidelity wireframes to establish the layout and user flow.</li>
-              <li>Built basic prototypes in Figma, ensuring a clean and intuitive interface.</li>
-            </ul>
-          </li>
-          <li>
-            <strong>Visual Design &amp; Branding</strong>
-            <ul>
-              <li>Designed a modern interface that reflects the core need for fire safety, highlighting urgency (red) and safety (green).</li>
-              <li>Employed consistent typography and spacing for readability.</li>
-            </ul>
-          </li>
-          <li>
-            <strong>Usability Testing &amp; Iteration</strong>
-            <ul>
-              <li>Conducted A/B testing with potential users to refine interface elements.</li>
-              <li>Iterated on design to enhance clarity, responsiveness, and accessibility across devices.</li>
-            </ul>
-          </li>
-        </ol>
+          <ul>
+            <li>
+              <strong>User-Centered Research &amp; Wireframing</strong> &mdash; Conducted research to understand participant needs and designed structured wireframes to establish the site layout.
+            </li>
+            <li>
+              <strong>Modern &amp; Engaging UI Design</strong> &mdash; Created an interface that reflected Arduino&rsquo;s identity, incorporating vibrant colors, clear typography, and intuitive navigation.
+            </li>
+            <li>
+              <strong>Seamless User Experience</strong> &mdash; Ensured that content was easily accessible, allowing attendees to quickly view event schedules, speaker details, and live streams.
+            </li>
+            <li>
+              <strong>Collaboration with Developers</strong> &mdash; Worked alongside the web development team to ensure smooth integration and cross-device compatibility.
+            </li>
+          </ul>
 
-        <p>
-          This project was developed as part of the Alertech Arduino Hackathon, in collaboration with a team of four. Through iterative design improvements and a focus on usability, Alertech delivers an efficient and accessible fire safety solution.
-        </p>
-      </div>
+          <p>
+            By integrating visual appeal and functionality, I contributed to a richer and more engaging online experience for Arduino Day attendees.
+          </p>
+        </div>
       `,
       image: '/images/project-3.png'
     },
