@@ -166,27 +166,40 @@ const About = () => {
       </div>
 
       {/* Tablet */}
-      <div className='hidden sm:flex lg:hidden bg-primary h-full flex-col justify-center items-center relative'>
+      <div className='hidden sm:flex lg:hidden bg-primary min-h-[1200px] flex-col justify-center items-center relative'>
         {/* Experience */}
         <div className='relative h-full pt-4 flex flex-1 flex-col p-5'>
           <div>
             <h1 className='dm-serif-display-regular-italic text-blueSecondary text-2xl mb-[16px]'>Experiece</h1>
             <div>
-            {exps.map((exp, index) => (
+            {exps.slice(0, 2).map((exp, index) => (
               <div>
                 <div className='border border-lightGray'/>
-                <div key={index} className='flex pt-[7px] pb-[12px]'>
-                  <div className='dm-sans-text-regular text-md text-blueSecondary w-[122px]'>
+                <div key={index} className='flex flex-col pt-[7px] pb-[12px]'>
+                  <div className='dm-sans-text-bold text-md text-blueSecondary'>
                     {exp.title}
                   </div>
-                  <div className='dm-sans-text-regular pl-[43px] text-md text-lightGray'>
-                    {exp.description}
+                  <div className='text-blueSecondary text-md dm-sans-text-regular'>
+                    <span className='dm-sans-text-italic'>{exp.subtitle.split('|').splice(0, 1)} </span>| {exp.subtitle.split('|').splice(1, 1)}
                   </div>
+                  <ul className='dm-sans-text-regular list-inside list-disc text-[12px] text-lightGray mt-2'>
+                    {exp.description.map((desc, index) => (
+                      <li key={index} className='text-[#7C7C7C]'>
+                        {desc}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}
             <div className='border border-lightGray'/>
             </div>
+          </div>
+          {/* View more button */}
+          <div className='absolute left-1/2 bottom-10 transform -translate-x-1/2'>
+            <Button onClick={toggleDrawer} variant={'primary'} className={'px-[15px] text-[13px] rounded-full'}>
+              View More
+            </Button>
           </div>
         </div>
 
@@ -240,21 +253,33 @@ const About = () => {
           <div>
             <h1 className='dm-serif-display-regular-italic text-blueSecondary text-xl mb-[16px]'>Experiece</h1>
             <div>
-            {exps.map((exp, index) => (
+            {exps.slice(0, 2).map((exp, index) => (
               <div>
                 <div className='border border-lightGray'/>
-                <div key={index} className='flex pt-[7px] pb-[12px]'>
-                  <div className='dm-sans-text-regular text-sm text-blueSecondary w-[122px]'>
+                <div key={index} className='flex flex-col pt-[7px] pb-[12px]'>
+                  <div className='dm-sans-text-bold text-[12px] text-blueSecondary'>
                     {exp.title}
                   </div>
-                  <div className='dm-sans-text-regular pl-[43px] text-sm text-lightGray'>
-                    {exp.description}
+                  <div className='text-blueSecondary text-[12px] dm-sans-text-regular'>
+                    <span className='dm-sans-text-italic'>{exp.subtitle.split('|').splice(0, 1)} </span>| {exp.subtitle.split('|').splice(1, 1)}
                   </div>
+                  <ul className='dm-sans-text-regular list-inside list-disc text-[12px] text-lightGray mt-2'>
+                    {exp.description.map((desc, index) => (
+                      <li key={index} className='text-[#7C7C7C]'>
+                        {desc}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}
             <div className='border border-lightGray'/>
             </div>
+          </div>
+          <div className='mt-5'>
+            <Button onClick={toggleDrawer} variant={'primary'} className={'w-[100px] px-[12px] text-[13px] rounded-full'}>
+              View More
+            </Button>
           </div>
         </div>
 
@@ -307,23 +332,61 @@ const About = () => {
           open={drawer}
           onClose={toggleDrawer}
         >
-        <div className='w-max bg-[#C7D9E5] relative min-h-full h-max pt-[51px] pl-[61px] pr-[56px] flex-1'>
-          <div className='flex flex-col'>
-            <h1 className='dm-serif-display-regular-italic text-blueSecondary text-[40px] mb-[16px]'>Experiece</h1>
-            <div className='overflow-y-scroll h-[80vh] scroll-container'>
-            {exps.slice(2).map((exp, index) => (
-              <div className='max-w-[1040px]'>
+          <>
+          {/* Drawer Desktop */}
+          <div className='hidden lg:block w-max bg-[#C7D9E5] relative min-h-full h-max pt-[51px] pl-[61px] pr-[56px] flex-1'>
+            <div className='flex flex-col '>
+              <h1 className='dm-serif-display-regular-italic text-blueSecondary text-[40px] mb-[16px]'>Experiece</h1>
+              <div className='overflow-y-scroll h-[80vh] scroll-container'>
+              {exps.slice(2).map((exp, index) => (
+                <div className='max-w-[1040px]'>
+                  <div className='border border-lightGray'/>
+                  <div key={index} className='flex flex-col pt-[7px] pb-[12px]'>
+                    <div className='dm-sans-text-bold text-[24px] text-blueSecondary'>
+                      {exp.title}
+                    </div>
+                    <div className='text-blueSecondary text-[24px] dm-sans-text-regular'>
+                      <span className='dm-sans-text-italic'>{exp.subtitle.split('|').splice(0, 1)} </span>| {exp.subtitle.split('|').splice(1, 1)}
+                    </div>
+                    <ul className='dm-sans-text-regular list-inside list-disc text-[24px] text-lightGray mt-2 line-height-38'>
+                      {exp.description.map((desc, index) => (
+                        <li key={index} className='line-height-38 text-[#7C7C7C]'>
+                          {desc}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+              <div className='border border-lightGray'/>
+              </div>
+            </div>
+              {/* View more button */}
+              <div className='absolute left-1/2 bottom-0 transform -translate-x-1/2 pb-[51px]'>
+                <Button onClick={toggleDrawer} variant={'primary'} className={'w-[200px] flex justify-center text-xl text-nowrap'}>
+                  Back
+                </Button>
+              </div>
+          </div>
+
+          {/* Drawer Tablet */}
+          <div className='bg-[#C7D9E5] relative min-h-full h-max pt-[51px] pl-[61px] pr-[56px] flex-1'>
+            <div className='flex flex-col '>
+              <h1 className='dm-serif-display-regular-italic text-blueSecondary text-[40px] mb-[16px]'>Experiece</h1>
+              <div className='overflow-y-scroll h-[80vh] scroll-container'>
+              {exps.slice(0, 2).map((exp, index) => (
+              <div>
                 <div className='border border-lightGray'/>
                 <div key={index} className='flex flex-col pt-[7px] pb-[12px]'>
-                  <div className='dm-sans-text-bold text-[24px] text-blueSecondary'>
+                  <div className='dm-sans-text-bold text-md text-blueSecondary'>
                     {exp.title}
                   </div>
-                  <div className='text-blueSecondary text-[24px] dm-sans-text-regular'>
+                  <div className='text-blueSecondary text-md dm-sans-text-regular'>
                     <span className='dm-sans-text-italic'>{exp.subtitle.split('|').splice(0, 1)} </span>| {exp.subtitle.split('|').splice(1, 1)}
                   </div>
-                  <ul className='dm-sans-text-regular list-inside list-disc text-[24px] text-lightGray mt-2 line-height-38'>
+                  <ul className='dm-sans-text-regular list-inside list-disc text-[12px] text-lightGray mt-2'>
                     {exp.description.map((desc, index) => (
-                      <li key={index} className='line-height-38 text-[#7C7C7C]'>
+                      <li key={index} className='text-[#7C7C7C]'>
                         {desc}
                       </li>
                     ))}
@@ -331,16 +394,18 @@ const About = () => {
                 </div>
               </div>
             ))}
-            <div className='border border-lightGray'/>
+              <div className='border border-lightGray'/>
+              </div>
             </div>
+              {/* View more button */}
+              <div className='absolute left-1/2 bottom-0 transform -translate-x-1/2 pb-[51px]'>
+                <Button onClick={toggleDrawer} variant={'primary'} className={'w-[150px] flex justify-center text-sm text-nowrap'}>
+                  Back
+                </Button>
+              </div>
           </div>
-            {/* View more button */}
-            <div className='absolute left-1/2 bottom-0 transform -translate-x-1/2 pb-[51px]'>
-              <Button onClick={toggleDrawer} variant={'primary'} className={'w-[200px] flex justify-center text-xl text-nowrap'}>
-                Back
-              </Button>
-            </div>
-        </div>
+          
+          </>
       </Drawer>
     </div>
   )

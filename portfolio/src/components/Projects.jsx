@@ -138,7 +138,7 @@ const Projects = () => {
           This website was developed as part of our Data Structures and Algorithms (DSA) case study presentation, combining interactive learning with engaging design. It showcases several key case studies, each demonstrating fundamental data structures and algorithms through hands-on experimentation.
         </p>
 
-        <h2>UI/UX Design Process</h2>
+        <p>UI/UX Design Process</p>
         <p>
           As the UI/UX designer, I focused on creating a visually engaging and intuitive platform tailored to make learning DSA more interactive:
         </p>
@@ -253,11 +253,12 @@ const Projects = () => {
           <div className='grid grid-cols-2 gap-y-8 gap-x-14 mt-6'>
           {/* <div className='flex flex-wrap justify-around'> */}
             {projects.map((project, index) => (
-              <div className='flex justify-center' key={index}>
+              <div onClick={() => handleProject(project)} className='relative flex justify-center hover:scale-105 cursor-pointer' key={index}>
+                <div className='absolute h-full w-full project-gradient rounded-2xl z-10 overflow-hidden'/>
                 <div key={index} className={`cover w-[300px] h-[200px] bg-slate-500 rounded-2xl flex flex-col relative project-shadow overflow-hidden`}>
                   <img src={project.image} alt="" className='object-cover w-full h-full cover' />
                   {/* <h1 className='absolute dm-serif-display-regular text-[24px] text-blueSecondary'>{project.title}</h1> */}
-                  <p className='absolute bottom-3 left-6 text-md text-white dm-serif-display-regular-italic'>{project.description}</p>
+                  <p className='z-10 absolute bottom-3 left-6 text-md text-white dm-serif-display-regular-italic'>{project.title}</p>
                 </div>
               </div>
             ))}
@@ -276,11 +277,12 @@ const Projects = () => {
           <div className='grid grid-cols-1 gap-y-8 mt-6'>
           {/* <div className='flex flex-wrap justify-around'> */}
             {projects.map((project, index) => (
-              <div className='flex justify-center' key={index}>
+              <div onClick={() => handleProject(project)} className='relative flex justify-center' key={index}>
+                <div className='absolute h-full w-full project-gradient rounded-2xl z-10 overflow-hidden'/>
                 <div key={index} className={`cover w-[264px] h-[180px] bg-slate-500 rounded-2xl flex flex-col relative project-shadow overflow-hidden`}>
-                  <img src={project.image} alt="" className='object-cover w-full h-full cover' />
+                  <img src={project.image} alt="" className='object-cover w-full h-full' />
                   {/* <h1 className='absolute dm-serif-display-regular text-[24px] text-blueSecondary'>{project.title}</h1> */}
-                  <p className='absolute bottom-3 left-6 text-sm text-white dm-serif-display-regular-italic'>{project.description}</p>
+                  <p className='z-10 absolute bottom-3 left-6 text-sm text-white dm-serif-display-regular-italic'>{project.title}</p>
                 </div>
               </div>
             ))}
@@ -291,14 +293,17 @@ const Projects = () => {
         </div>
       </div>
       
+
       <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
+
         <div className='h-full w-full flex justify-center items-center' onClick={handleClose}>
-          <div className='relative flex flex-col bg-[#F4EFEB] p-11 rounded-2xl w-[740px] h-[90%] '>
+          {/* Modal Desktop */}
+          <div className='hidden lg:flex relative flex-col bg-[#F4EFEB] p-11 rounded-2xl w-[740px] h-[90%] '>
             <img src={selectedProject.image} alt="" className='rounded-2xl w-[655px] h-[370px] object-fit-cover flex-shrink-0' />
             <h3 className='mt-6 text-[#57808E] text-[40px] dm-serif-display-regular-italic'>
               {selectedProject.title}
@@ -311,6 +316,37 @@ const Projects = () => {
             </Button>
           </div>
 
+          {/* Modal Tablet */}
+          <div className='hidden md:flex lg:hidden relative justify-center items-center flex-col bg-[#F4EFEB] p-11 rounded-2xl w-[640px] h-[90%] '>
+            <div className='flex justify-center items-center w-[500px] h-[200px]'>
+            <img src={selectedProject.image} alt="" className='rounded-lg w-full h-full object-cover' />
+            </div>
+            <h3 className='mt-6 text-[#57808E] text-2xl dm-serif-display-regular-italic'>
+              {selectedProject.title}
+            </h3>
+            <div className='h-[70%] prose prose-lg overflow-y-auto scroll-container'>
+              <div className='pb-6 mt-4 text-[#7C7C7C] text-lg dm-sans-text-regular' dangerouslySetInnerHTML={{__html: selectedProject.description}}/>
+            </div>
+            <Button variant={'primary'} className={'absolute bottom-5 left-1/2 -translate-x-1/2'} onClick={handleClose}>
+              Back
+            </Button>
+          </div>
+
+          {/* Modal Mobile */}
+          <div className='flex md:hidden lg:hidden relative justify-center items-center flex-col bg-[#F4EFEB] p-3 w-full h-full '>
+            <div className='mt-5 flex justify-center items-center w-[90%] h-[200px]'>
+            <img src={selectedProject.image} alt="" className='rounded-lg w-full h-full object-cover' />
+            </div>
+            <h3 className='mt-6 text-[#57808E] text-2xl dm-serif-display-regular-italic'>
+              {selectedProject.title}
+            </h3>
+            <div className='h-[70%] prose prose-lg overflow-y-auto scroll-container'>
+              <div className='pb-6 mt-4 text-[#7C7C7C] text-lg dm-sans-text-regular' dangerouslySetInnerHTML={{__html: selectedProject.description}}/>
+            </div>
+            <Button variant={'primary'} className={'absolute bottom-5 left-1/2 -translate-x-1/2'} onClick={handleClose}>
+              Back
+            </Button>
+          </div>
         </div>
       </Modal>
 
