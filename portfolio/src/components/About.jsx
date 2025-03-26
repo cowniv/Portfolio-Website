@@ -166,7 +166,7 @@ const About = () => {
       </div>
 
       {/* Tablet */}
-      <div className='hidden sm:flex lg:hidden bg-primary min-h-[1200px] flex-col justify-center items-center relative'>
+      <div className='hidden w-full sm:flex lg:hidden bg-primary min-h-[1200px] flex-col justify-center  relative'>
         {/* Experience */}
         <div className='relative h-full pt-4 flex flex-1 flex-col p-5'>
           <div>
@@ -204,7 +204,7 @@ const About = () => {
         </div>
 
         {/* Certifications and Education */}
-        <div className='h-full w-screen bg-white pt-4 pb-[58px] p-5'>
+        <div className='h-full w-full bg-white pt-4 pb-[58px] p-5'>
           {/* Certifications */}
           <div className='flex flex-col w-full'>
             <h1 className='dm-serif-display-regular-italic text-blueSecondary text-2xl mb-[9px]'>Certifications</h1>
