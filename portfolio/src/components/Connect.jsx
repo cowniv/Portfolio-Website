@@ -1,4 +1,5 @@
 import React from 'react'
+import Painting from '/gifs/painting-bg.gif'
 
 const Connect = () => {
   const socials = [
@@ -27,7 +28,7 @@ const Connect = () => {
 
 
   return (
-    <div className='relative h-[664px] bg-bluePrimary bg-[url(/images/connect-bg.png)] bg-cover bg-center flex justify-center items-center'>
+    <div className={`relative h-[664px] bg-bluePrimary bg-[url('/gifs/painting-bg.gif')] bg-[center_top] bg-cover bg-center flex justify-center items-center`}>
       <div className='absolute left-[37px] top-[240px]'>
         <div className='w-[318px]'>
           <h1 className='text-[70px] dm-serif-display-regular-italic text-white text-shadow-blue'>LET&apos;S CONNECT!</h1>

@@ -24,6 +24,9 @@ function App() {
         <div id="skills">
           <Skills />
         </div>
+        <div id="connect">
+          <Connect />
+        </div>
       </div>
     </div>
   )
