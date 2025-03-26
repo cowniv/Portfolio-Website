@@ -175,7 +175,6 @@ const Hero = () => {
                                 <a
                                     href="https://mail.google.com/mail/?view=cm&fs=1&to=jasminfedilo.pup@gmail.com"
                                     target="_blank"
-                                    rel="noopener noreferrer"
                                     className="block w-full h-full text-center"
                                 >
                                     Email
