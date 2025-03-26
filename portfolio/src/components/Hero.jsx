@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import Navbar from './Navbar'
 import Button from './Button'
 
 const Hero = () => {

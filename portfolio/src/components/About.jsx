@@ -204,9 +204,9 @@ const About = () => {
         </div>
 
         {/* Certifications and Education */}
-        <div className='h-full w-full bg-white pt-4 pb-[58px] p-5'>
+        <div className='h-full w-screen bg-white pt-4 pb-[58px] p-5'>
           {/* Certifications */}
-          <div className='flex flex-col'>
+          <div className='flex flex-col w-full'>
             <h1 className='dm-serif-display-regular-italic text-blueSecondary text-2xl mb-[9px]'>Certifications</h1>
             <ul className='mb-[16px] list-inside list-disc'>
               {certs.map((cert, index) => (
