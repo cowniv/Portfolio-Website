@@ -3,26 +3,30 @@ import React from 'react'
 const Skills = () => {
   const skills = [
     {
-      title: 'Tools & Tech',
+      title: 'Frontend Development',
       items: [
-        'Figma Design',
-        'Figma Design',
-        'Figma Design',
+        'Languages: Python, JavaScript',
+        'Frameworks: React, Tailwind, MUI',
+        'Versioning: Git, GitHub',
+        'Database: MySQL, SQLite',
+        'Concepts: OOP, DSA',
+        'Tools: VS Code'
       ]
     },
     {
-      title: 'Tools & Tech',
+      title: 'UI/UX Design',
       items: [
-        'Figma Design',
-        'Figma Design',
-        'Figma Design',
+        'Wireframing: Figma',
+        'Components: Design Systems',
+        'Accessibility: Responsive Design',
+        'Principles: UCD, Design Thinking'
       ]
-    }
+    },
   ]
 
 
   return (
-    <div className='h-max w-full bg-primary'>
+    <div className='h-max w-full bg-primary max-w-[2700px] mx-auto'>
 
       {/* Desktop */}
       <div className='hidden lg:flex h-page flex-col'>
@@ -49,51 +53,25 @@ const Skills = () => {
           <div className='z-40 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border border-blueSecondary h-[327px]'>
           </div>
           {/* 2nd Row - 1st Column */}
-          <div className='relative w-1/2 bg-white flex flex-col justify-center px-[51px] gap-[31px]'>
+          <div className='relative w-1/2 bg-white flex justify-around px-[51px] gap-[31px]'>
             <div className='z-50 absolute left-1/2 top-[-1px] -translate-x-1/2 border border-blueSecondary w-[327px]'/>
-              <h1 className='absolute top-[92px] left-[51px] text-[40px] text-blueSecondary dm-serif-display-regular-italic'>Tools & Tech</h1>
-              <div className='flex justify-between w-[70%]'>
-                <div className='flex flex-col gap-[29px]'>
-                  <div className='flex gap-[13px] items-center'>
-                    <div className='bg-bluePrimary rounded-full '>
-                      <img src="/images/check_small.png" alt="" />
-                    </div>
-                    <p className='text-[24px] dm-sans-text-regular text-lightGray'>Figma Design</p>
-                  </div>
-                  <div className='flex gap-[13px] items-center'>
-                    <div className='bg-bluePrimary rounded-full '>
-                      <img src="/images/check_small.png" alt="" />
-                    </div>
-                    <p className='text-[24px] dm-sans-text-regular text-lightGray'>Figma Design</p>
-                  </div>
-                  <div className='flex gap-[13px] items-center'>
-                    <div className='bg-bluePrimary rounded-full '>
-                      <img src="/images/check_small.png" alt="" />
-                    </div>
-                    <p className='text-[24px] dm-sans-text-regular text-lightGray'>Figma Design</p>
-                  </div>
+            {skills.map((skill, idx) => (
+              <div key={idx} className="mt-10">
+                <div className='h-32'>
+                  <h1 className='text-[40px] text-blueSecondary dm-serif-display-regular-italic mb-5'>{skill.title}</h1>
                 </div>
-                <div className='flex flex-col gap-[29px]'>
-                  <div className='flex gap-[13px] items-center'>
-                    <div className='bg-bluePrimary rounded-full '>
-                      <img src="/images/check_small.png" alt="" />
+                <div className='flex flex-col justify-between w-[70%]'>
+                  {skill.items.map((item, index) => (
+                    <div key={index} className='flex gap-[13px] items-center'>
+                      <div className='flex-[0.1] bg-bluePrimary rounded-full w-4 h-4'>
+                        <img src="/images/check_small.png" alt="Check" className='object-contain w-full h-full' />
+                      </div>
+                      <p className='flex-[0.9] text-[24px] dm-sans-text-regular text-lightGray'>{item}</p>
                     </div>
-                    <p className='text-[24px] dm-sans-text-regular text-lightGray'>Figma Design</p>
-                  </div>
-                  <div className='flex gap-[13px] items-center'>
-                    <div className='bg-bluePrimary rounded-full '>
-                      <img src="/images/check_small.png" alt="" />
-                    </div>
-                    <p className='text-[24px] dm-sans-text-regular text-lightGray'>Figma Design</p>
-                  </div>
-                  <div className='flex gap-[13px] items-center'>
-                    <div className='bg-bluePrimary rounded-full '>
-                      <img src="/images/check_small.png" alt="" />
-                    </div>
-                    <p className='text-[24px] dm-sans-text-regular text-lightGray'>Figma Design</p>
-                  </div>
+                  ))}
                 </div>
               </div>
+            ))}
           </div>
           {/* 2nd Row - 2nd Column */}
           <div className='w-1/2 bg-primary flex justify-center items-center relative'>
@@ -130,50 +108,24 @@ const Skills = () => {
           </div>
           {/* 2nd Row - 1st Column */}
           <div className='relative w-1/2 bg-white flex flex-col justify-center px-[51px] gap-[31px]'>
-            <div className='z-50 absolute left-1/2 top-[-1px] -translate-x-1/2 border border-blueSecondary w-[327px]'/>
-              <h1 className='absolute top-[92px] left-[51px] text-[40px] text-blueSecondary dm-serif-display-regular-italic'>Tools & Tech</h1>
-              <div className='flex justify-between w-[70%]'>
-                <div className='flex flex-col gap-[29px]'>
-                  <div className='flex gap-[13px] items-center'>
-                    <div className='bg-bluePrimary rounded-full '>
-                      <img src="/images/check_small.png" alt="" />
-                    </div>
-                    <p className='text-[24px] dm-sans-text-regular text-lightGray'>Figma Design</p>
-                  </div>
-                  <div className='flex gap-[13px] items-center'>
-                    <div className='bg-bluePrimary rounded-full '>
-                      <img src="/images/check_small.png" alt="" />
-                    </div>
-                    <p className='text-[24px] dm-sans-text-regular text-lightGray'>Figma Design</p>
-                  </div>
-                  <div className='flex gap-[13px] items-center'>
-                    <div className='bg-bluePrimary rounded-full '>
-                      <img src="/images/check_small.png" alt="" />
-                    </div>
-                    <p className='text-[24px] dm-sans-text-regular text-lightGray'>Figma Design</p>
-                  </div>
+            <div className='z-40 absolute left-1/2 top-[-1px] -translate-x-1/2 border border-blueSecondary w-[327px]'/>
+            {skills.map((skill, idx) => (
+              <div key={idx} className="mt-5">
+                <div className='h-12'>
+                  <h1 className='text-[24px] text-blueSecondary dm-serif-display-regular-italic mb-5'>{skill.title}</h1>
                 </div>
-                <div className='flex flex-col gap-[29px]'>
-                  <div className='flex gap-[13px] items-center'>
-                    <div className='bg-bluePrimary rounded-full '>
-                      <img src="/images/check_small.png" alt="" />
+                <div className='flex flex-col justify-between w-[70%]'>
+                  {skill.items.map((item, index) => (
+                    <div key={index} className='flex gap-[13px] items-center'>
+                      <div className='flex-[0.1] bg-bluePrimary rounded-full w-4 h-4'>
+                        <img src="/images/check_small.png" alt="Check" className='object-contain w-full h-full' />
+                      </div>
+                      <p className='flex-[0.9] text-[20px] dm-sans-text-regular text-lightGray'>{item}</p>
                     </div>
-                    <p className='text-[24px] dm-sans-text-regular text-lightGray'>Figma Design</p>
-                  </div>
-                  <div className='flex gap-[13px] items-center'>
-                    <div className='bg-bluePrimary rounded-full '>
-                      <img src="/images/check_small.png" alt="" />
-                    </div>
-                    <p className='text-[24px] dm-sans-text-regular text-lightGray'>Figma Design</p>
-                  </div>
-                  <div className='flex gap-[13px] items-center'>
-                    <div className='bg-bluePrimary rounded-full '>
-                      <img src="/images/check_small.png" alt="" />
-                    </div>
-                    <p className='text-[24px] dm-sans-text-regular text-lightGray'>Figma Design</p>
-                  </div>
+                  ))}
                 </div>
               </div>
+            ))}
           </div>
           {/* 2nd Row - 2nd Column */}
           <div className='w-1/2 bg-primary flex justify-center items-center relative'>
