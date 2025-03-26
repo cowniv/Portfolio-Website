@@ -28,13 +28,13 @@ const Connect = () => {
 
 
   return (
-    <div className={`min-h-[200px] lg:min-h-[500px] relative lg:h-[664px] bg-bluePrimary bg-[url('/gifs/painting-bg.gif')] bg-[center_top] bg-cover flex justify-center items-center`}>
-      <div className='absolute left-[37px] bottom-0 lg:top-[240px]'>
+    <div className={`min-h-[200px] md:min-h-[500px] relative md:h-[664px] bg-bluePrimary bg-[url('/gifs/painting-bg.gif')] bg-[center_top] bg-cover flex justify-center items-center`}>
+      <div className='absolute left-[37px] bottom-0 md:top-[240px]'>
         <div className='w-[318px]'>
-          <h1 className='text-[35px] lg:text-[70px] w-14 lg:w-full dm-serif-display-regular-italic text-white text-shadow-blue'>LET&apos;S CONNECT!</h1>
+          <h1 className='text-[35px] md:text-[70px] w-14 md:w-full dm-serif-display-regular-italic text-white text-shadow-blue'>LET&apos;S CONNECT!</h1>
         </div>
         {/* Socials Desktop */}
-        <div className='hidden lg:flex lg:flex-col'>
+        <div className='hidden md:flex md:flex-col'>
           {socials.map((social, index) => (
             <div key={index} className='flex items-center gap-2'>
               <div className='bg-white rounded-full h-[25px] flex justify-center items-center w-[25px]'>
@@ -44,17 +44,17 @@ const Connect = () => {
             </div>
           ))}
         </div>
-
-        <div className='absolute bottom-0 right-0 lg:hidden'>
-          {socials.map((social, index) => (
-            <div key={index} className='flex items-center gap-2'>
-              <div className='bg-white rounded-full h-[25px] flex justify-center items-center w-[25px]'>
-                <img src={social.img} alt="" />
-              </div>
-              <a href={social.link} target='_blank' className='dm-sans-text-italic text-[12px] text-shadow-blue text-white'>{social.name}</a>
+      </div>
+      {/* Socials Mobile */}
+      <div className='absolute bottom-0 right-0 md:hidden'>
+        {socials.map((social, index) => (
+          <div key={index} className='flex items-center gap-2'>
+            <div className='bg-white rounded-full h-[25px] flex justify-center items-center w-[25px]'>
+              <img src={social.img} alt="" />
             </div>
-          ))}
-        </div>
+            <a href={social.link} target='_blank' className='dm-sans-text-italic text-[12px] text-shadow-blue text-white'>{social.name}</a>
+          </div>
+        ))}
       </div>
     </div>
   )
