@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Button from './Button'
 import Drawer from '@mui/material/Drawer';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const About = () => {
   const [drawer, setDrawer] = useState(false)
@@ -10,7 +11,6 @@ const About = () => {
   }
 
   const certs = [
-    'UI/UX Design Fundamentals',
     'AI Fundamentals',
     'Data Literacy',
   ]
@@ -98,9 +98,9 @@ const About = () => {
                 </li>
               ))}
             </ul>
-            <Button variant={'primary'} className={'w-[200px] flex justify-center text-xl text-nowrap'}>
+            {/* <Button variant={'primary'} className={'w-[200px] flex justify-center text-xl text-nowrap'}>
               View More
-            </Button>
+            </Button> */}
           </div>
 
           {/* Education */}
@@ -215,9 +215,9 @@ const About = () => {
                 </li>
               ))}
             </ul>
-            <Button variant={'primary'} className={'w-[150px] flex justify-center text-nowrap text-md'}>
+            {/* <Button variant={'primary'} className={'w-[150px] flex justify-center text-nowrap text-md'}>
               View More
-            </Button>
+            </Button> */}
           </div>
 
           {/* Education */}
@@ -277,7 +277,7 @@ const About = () => {
             </div>
           </div>
           <div className='mt-5'>
-            <Button onClick={toggleDrawer} variant={'primary'} className={'w-[100px] px-[12px] text-[13px] rounded-full'}>
+            <Button onClick={toggleDrawer} variant={'primary'} className={'w-[100px] flex justify-center text-nowrap text-sm'}>
               View More
             </Button>
           </div>
@@ -295,9 +295,9 @@ const About = () => {
                 </li>
               ))}
             </ul>
-            <Button variant={'primary'} className={'w-[100px] flex justify-center text-nowrap text-sm'}>
+            {/* <Button variant={'primary'} className={'w-[100px] flex justify-center text-nowrap text-sm'}>
               View More
-            </Button>
+            </Button> */}
           </div>
 
           {/* Education */}
@@ -370,7 +370,7 @@ const About = () => {
           </div>
 
           {/* Drawer Tablet */}
-          <div className='bg-[#C7D9E5] relative min-h-full h-max pt-[51px] pl-[61px] pr-[56px] flex-1'>
+          <div className='bg-[#C7D9E5] lg:hidden relative min-h-full h-max pt-[51px] pl-[61px] pr-[56px] flex-1'>
             <div className='flex flex-col '>
               <h1 className='dm-serif-display-regular-italic text-blueSecondary text-[40px] mb-[16px]'>Experiece</h1>
               <div className='overflow-y-scroll h-[80vh] scroll-container'>
@@ -397,12 +397,12 @@ const About = () => {
               <div className='border border-lightGray'/>
               </div>
             </div>
-              {/* View more button */}
-              <div className='absolute left-1/2 bottom-0 transform -translate-x-1/2 pb-[51px]'>
-                <Button onClick={toggleDrawer} variant={'primary'} className={'w-[150px] flex justify-center text-sm text-nowrap'}>
-                  Back
-                </Button>
-              </div>
+            {/* View more button */}
+            <div className='absolute top-3 left-5 transform'>
+              <Button onClick={toggleDrawer} variant={'primary'} className={'w-2 flex justify-center text-xs text-nowrap'}>
+                <ArrowBackIcon/>
+              </Button>
+            </div>
           </div>
           
           </>

@@ -1,12 +1,13 @@
 import React, {useState} from 'react'
 import Button from './Button'
 import Modal from '@mui/material/Modal';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const Projects = () => {
   const [open, setOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState({
-    title: 'TITLE',
-    description: 'Lorem  Ipsim',
+    title: '',
+    description: '',
     image: ''
   });
   const handleOpen = () => setOpen(true);
@@ -75,7 +76,17 @@ const Projects = () => {
         </p>
       </div>
       `,
-      image: '/images/project-1.png'
+      image: '/images/project-1.png',
+      links: [
+        {
+          title: 'Website',
+          url: 'https://www.google.com'
+        },
+        {
+          title: 'Github',
+          url: 'https://www.github.com'
+        }
+      ]
     },
     {
       title: 'SPARKFEST',
@@ -303,17 +314,24 @@ const Projects = () => {
 
         <div className='h-full w-full flex justify-center items-center' onClick={handleClose}>
           {/* Modal Desktop */}
-          <div className='hidden lg:flex relative flex-col bg-[#F4EFEB] p-11 rounded-2xl w-[740px] h-[90%] '>
+          <div className='hidden lg:flex relative flex-col bg-[#F4EFEB] p-11 rounded-2xl w-[740px] h-[90%] overflow-y-auto scroll-container'>
             <img src={selectedProject.image} alt="" className='rounded-2xl w-[655px] h-[370px] object-fit-cover flex-shrink-0' />
             <h3 className='mt-6 text-[#57808E] text-[40px] dm-serif-display-regular-italic'>
               {selectedProject.title}
             </h3>
-            <div className='h-[70%] prose prose-lg overflow-y-auto scroll-container'>
-              <div className='pb-6 mt-4 text-[#7C7C7C] text-[24px] dm-sans-text-regular' dangerouslySetInnerHTML={{__html: selectedProject.description}}/>
+            <div className='flex flex-col'>
+              {selectedProject.links && selectedProject.links.map((link, index) => (
+                <a href={link.url} key={index} className='text-[#7C7C7C] text-[24px] dm-sans-text-500-italic '>{link.title}</a>
+              ))}
             </div>
-            <Button variant={'primary'} className={'absolute bottom-5 left-1/2 -translate-x-1/2'} onClick={handleClose}>
-              Back
-            </Button>
+            <div className='h-full prose prose-lg'>
+              <div className=' mt-4 text-[#7C7C7C] text-[24px] dm-sans-text-regular' dangerouslySetInnerHTML={{__html: selectedProject.description}}/>
+              <div className='flex justify-center items-center'>
+                <Button variant={'primary'} className={'mb-5'} onClick={handleClose}>
+                  <ArrowBackIcon /> Back
+                </Button>
+              </div>
+            </div>
           </div>
 
           {/* Modal Tablet */}
@@ -326,10 +344,12 @@ const Projects = () => {
             </h3>
             <div className='h-[70%] prose prose-lg overflow-y-auto scroll-container'>
               <div className='pb-6 mt-4 text-[#7C7C7C] text-lg dm-sans-text-regular' dangerouslySetInnerHTML={{__html: selectedProject.description}}/>
+              <div className='flex justify-center items-center'>
+                <Button variant={'primary'} className={'mb-5'} onClick={handleClose}>
+                  <ArrowBackIcon /> Back
+                </Button>
+              </div>
             </div>
-            <Button variant={'primary'} className={'absolute bottom-5 left-1/2 -translate-x-1/2'} onClick={handleClose}>
-              Back
-            </Button>
           </div>
 
           {/* Modal Mobile */}
@@ -342,10 +362,12 @@ const Projects = () => {
             </h3>
             <div className='h-[70%] prose prose-lg overflow-y-auto scroll-container'>
               <div className='pb-6 mt-4 text-[#7C7C7C] text-lg dm-sans-text-regular' dangerouslySetInnerHTML={{__html: selectedProject.description}}/>
+              <div className='flex justify-center items-center'>
+                <Button variant={'primary'} className={'mb-5'} onClick={handleClose}>
+                  <ArrowBackIcon /> Back
+                </Button>
+              </div>
             </div>
-            <Button variant={'primary'} className={'absolute bottom-5 left-1/2 -translate-x-1/2'} onClick={handleClose}>
-              Back
-            </Button>
           </div>
         </div>
       </Modal>
