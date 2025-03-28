@@ -335,14 +335,14 @@ const Projects = () => {
           </div>
 
           {/* Modal Tablet */}
-          <div className='hidden md:flex lg:hidden relative justify-center items-center flex-col bg-[#F4EFEB] p-11 rounded-2xl w-[640px] h-[90%] '>
+          <div className='hidden md:flex lg:hidden relative justify-center items-center flex-col bg-[#F4EFEB] p-11 rounded-2xl w-[640px] h-[90%] overflow-y-auto scroll-container'>
             <div className='flex justify-center items-center w-[500px] h-[200px]'>
             <img src={selectedProject.image} alt="" className='rounded-lg w-full h-full object-cover' />
             </div>
             <h3 className='mt-6 text-[#57808E] text-2xl dm-serif-display-regular-italic'>
               {selectedProject.title}
             </h3>
-            <div className='h-[70%] prose prose-lg overflow-y-auto scroll-container'>
+            <div className='h-[70%] prose prose-lg'>
               <div className='pb-6 mt-4 text-[#7C7C7C] text-lg dm-sans-text-regular' dangerouslySetInnerHTML={{__html: selectedProject.description}}/>
               <div className='flex justify-center items-center'>
                 <Button variant={'primary'} className={'mb-5'} onClick={handleClose}>
@@ -353,14 +353,14 @@ const Projects = () => {
           </div>
 
           {/* Modal Mobile */}
-          <div className='flex md:hidden lg:hidden relative justify-center items-center flex-col bg-[#F4EFEB] p-3 w-full h-full '>
+          <div className='flex md:hidden lg:hidden relative justify-center items-center flex-col bg-[#F4EFEB] p-3 w-full h-full overflow-y-auto scroll-container'>
             <div className='mt-5 flex justify-center items-center w-[90%] h-[200px]'>
             <img src={selectedProject.image} alt="" className='rounded-lg w-full h-full object-cover' />
             </div>
             <h3 className='mt-6 text-[#57808E] text-2xl dm-serif-display-regular-italic'>
               {selectedProject.title}
             </h3>
-            <div className='h-[70%] prose prose-lg overflow-y-auto scroll-container'>
+            <div className='h-[70%] prose prose-lg'>
               <div className='pb-6 mt-4 text-[#7C7C7C] text-lg dm-sans-text-regular' dangerouslySetInnerHTML={{__html: selectedProject.description}}/>
               <div className='flex justify-center items-center'>
                 <Button variant={'primary'} className={'mb-5'} onClick={handleClose}>
