@@ -381,7 +381,7 @@ const Projects = () => {
             </h3>
             <div className='flex flex-col'>
               {selectedProject.links && selectedProject.links.map((link, index) => (
-                <a href={link.url} key={index} className='text-[#7C7C7C] text-[24px] dm-sans-text-500-italic '>{link.title}</a>
+                <a href={link.url} key={index} target='_blank' className='text-[#7C7C7C] text-[24px] dm-sans-text-500-italic '>{link.title}</a>
               ))}
             </div>
             <div className='h-full prose prose-lg'>
@@ -404,7 +404,7 @@ const Projects = () => {
             </h3>
             <div className='flex flex-col justify-center items-center'>
               {selectedProject.links && selectedProject.links.map((link, index) => (
-                <a href={link.url} key={index} className='text-[#7C7C7C] text-[15px] dm-sans-text-500-italic '>{link.title}</a>
+                <a href={link.url} key={index} target='_blank' className='text-[#7C7C7C] text-[15px] dm-sans-text-500-italic '>{link.title}</a>
               ))}
             </div>
             <div className='h-[70%] prose prose-lg'>
@@ -427,7 +427,7 @@ const Projects = () => {
             </h3>
             <div className='flex flex-col justify-center items-center'>
               {selectedProject.links && selectedProject.links.map((link, index) => (
-                <a href={link.url} key={index} className='text-[#7C7C7C] text-[15px] dm-sans-text-500-italic '>{link.title}</a>
+                <a href={link.url} key={index} target='_blank' className='text-[#7C7C7C] text-[15px] dm-sans-text-500-italic '>{link.title}</a>
               ))}
             </div>
             <div className='h-[70%] prose prose-lg'>
