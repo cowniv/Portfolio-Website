@@ -362,11 +362,11 @@ const About = () => {
               </div>
             </div>
               {/* View more button */}
-              <div className='absolute left-1/2 bottom-0 transform -translate-x-1/2 pb-[51px]'>
-                <Button onClick={toggleDrawer} variant={'primary'} className={'w-[200px] flex justify-center text-xl text-nowrap'}>
-                  Back
-                </Button>
-              </div>
+              <div className='absolute top-3 left-5 transform'>
+                <ArrowBackIcon onClick={toggleDrawer} className='text-[#7C7C7C] text-[24px] cursor-pointer'/>
+                {/* <Button onClick={toggleDrawer} variant={'primary'} className={'w-2 flex justify-center text-xs text-nowrap'}>
+                </Button> */}
+            </div>
           </div>
 
           {/* Drawer Tablet */}
@@ -399,9 +399,9 @@ const About = () => {
             </div>
             {/* View more button */}
             <div className='absolute top-3 left-5 transform'>
-              <Button onClick={toggleDrawer} variant={'primary'} className={'w-2 flex justify-center text-xs text-nowrap'}>
-                <ArrowBackIcon/>
-              </Button>
+              <ArrowBackIcon onClick={toggleDrawer}  className='text-[#7C7C7C] cursor-pointer'/>
+              {/* <Button onClick={toggleDrawer} variant={'primary'} className={'w-2 flex justify-center text-xs text-nowrap'}>
+              </Button> */}
             </div>
           </div>
           
