@@ -216,7 +216,7 @@ const Hero = () => {
                 <div className={`min-h-max ${heightThreshold ? 'h-[175px]' : 'h-[100px]'} bg-white w-full py-[10px]`}>
                     <div className='h-full justify-center items-center w-full'>
                         <div className='w-full flex items-center justify-end pr-[40px] h-full'>
-                            <div className='dm-sans-text-italic text-lightGray text-xl w-[226px]'>Want to Collaborate or say just hi? Reach out</div>
+                            <div className='dm-sans-text-italic text-lightGray text-xl w-[226px]'>Want to collaborate or say just hi? Reach out</div>
                             <div className={`border border-lightGray ${heightThreshold ? 'h-[125px]' : 'h-[60px]'} w-[1px] mr-[40px] ml-[10px]`}/>
                             <div className='border rounded-full border-lightGray w-[39px] h-[39px] cursor-pointer justify-center flex items-center hover:bg-primary hover:scale-125 transition-transform'>
                                 <a href="https://www.linkedin.com/in/jasmin-ivy-fedilo-a5ab83247/" target="_blank">
