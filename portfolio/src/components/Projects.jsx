@@ -32,7 +32,7 @@ const Projects = () => {
       description: `
       <div>
         <p>
-          Alertech is an integrated fire detection and alert solution that reduces response time and potential fire hazards. The system consists of a mobile app, a website, and an IoT device, tracking temperature, humidity, and smoke levels to provide real-time alerts to users and fire authorities in case of potential fire hazards.
+          <strong>Alertech</strong> is an integrated fire detection and alert solution that reduces response time and potential fire hazards. The system consists of a mobile app, a website, and an IoT device, tracking temperature, humidity, and smoke levels to provide real-time alerts to users and fire authorities in case of potential fire hazards.
         </p>
 
         <p>UI/UX Design Process</p>
@@ -79,12 +79,12 @@ const Projects = () => {
       image: '/images/project-1.png',
       links: [
         {
-          title: 'Website',
-          url: 'https://www.google.com'
+          title: 'Demo Link',
+          url: 'https://alertech-firestation-dashboard.vercel.app/'
         },
         {
           title: 'Github',
-          url: 'https://www.github.com'
+          url: 'https://github.com/geraldsberongoy/Arduino-Hackathon-Web'
         }
       ]
     },
@@ -104,7 +104,17 @@ const Projects = () => {
         <p>By integrating usability and aesthetics, I helped create a seamless and engaging platform for SparkFest participants.</p>
       </div>
       `,
-      image: '/images/project-2.png'
+      image: '/images/project-2.png',
+      links: [
+        {
+          title: 'Demo Link',
+          url: 'https://sparkfest-2025-h73c.vercel.app/'
+        },
+        {
+          title: 'Github',
+          url: 'https://github.com/DavidBatoDev/sparkfest-2025/tree/main/src'
+        }
+      ]
     },
     {
       title: 'ARDUINO DAY',
@@ -139,7 +149,17 @@ const Projects = () => {
           </p>
         </div>
       `,
-      image: '/images/project-3.png'
+      image: '/images/project-3.png',
+      links: [
+        {
+          title: 'Demo Link',
+          url: 'https://www.arduinodayphilippines.cc/'
+        },
+        {
+          title: 'Github',
+          url:'https://github.com/DavidBatoDev/arduino-ph-2025'
+        }
+      ]
     },
     {
       title: 'DSA Visualizer',
@@ -177,7 +197,17 @@ const Projects = () => {
         </p>
       </div>
       `,
-      image: '/images/project-4.png'
+      image: '/images/project-4.png',
+      links: [
+        {
+          title: 'Demo Link',
+          url: 'https://dsa-mu-12.vercel.app/'
+        },
+        {
+          title: 'Github',
+          url:'https://github.com/cowniv/DSA-Project---Group-12'
+        }
+      ]
     },
     {
       title: 'Food Delivery App',
@@ -219,12 +249,42 @@ const Projects = () => {
       </div>
 
       `,
-      image: '/images/project-5.jpg'
+      image: '/images/project-5.jpg',
+      links: [
+        {
+          title: 'Demo Link',
+          url: 'https://www.figma.com/proto/B31yg2avWM24ldrTBETTVy/Portfolio-Projects?node-id=27-10&t=BKl0dnvLBXEgfnHd-0&scaling=scale-down&content-scaling=fixed&page-id=17%3A3'
+        }
+      ]
     },
     {
       title: 'Event RSVP Manager',
-      description: 'Lorem  Ipsim',
-      image: '/images/project-6.jpg'
+      description: `
+      <div>
+        <p>
+          The Event RSVP Manager is a web-based application designed to simplify event registration and attendance tracking. It provides an intuitive interface for users to RSVP to events while enabling organizers to manage guest lists efficiently.
+        </p>
+
+        <p>Tech Stack & Features</p>
+        <ul>
+          <li><strong className="text-blue-600">Magic UI & ShadCN</strong> &ndash; Leveraged for sleek, modern UI components and smooth user interactions.</li>
+          <li><strong>Tailwind CSS</strong> &ndash; Ensured a responsive and visually appealing design with utility-first styling.</li>
+          <li><strong>React</strong> &ndash; Built with a component-based architecture for a seamless user experience.</li>
+          <li><strong>Firebase</strong> &ndash; Used for real-time data storage and authentication, allowing secure event management.</li>
+        </ul>
+
+        <p>
+          This project streamlines the event registration process, providing an efficient and user-friendly experience for both attendees and organizers.
+        </p>
+      </div>
+      `,
+      image: '/images/project-6.jpg',
+      links: [
+        {
+          title: 'Demo Link',
+          url: 'https://gdg-firebase-sj.vercel.app/'
+        }
+      ]
     },
 
   ]
@@ -336,12 +396,17 @@ const Projects = () => {
 
           {/* Modal Tablet */}
           <div className='hidden md:flex lg:hidden relative justify-center items-center flex-col bg-[#F4EFEB] p-11 rounded-2xl w-[640px] h-[90%] overflow-y-auto scroll-container'>
-            <div className='flex justify-center items-center w-[500px] h-[200px]'>
+            <div className='mt-24 flex justify-center items-center w-[500px] h-[200px]'>
             <img src={selectedProject.image} alt="" className='rounded-lg w-full h-full object-cover' />
             </div>
             <h3 className='mt-6 text-[#57808E] text-2xl dm-serif-display-regular-italic'>
               {selectedProject.title}
             </h3>
+            <div className='flex flex-col justify-center items-center'>
+              {selectedProject.links && selectedProject.links.map((link, index) => (
+                <a href={link.url} key={index} className='text-[#7C7C7C] text-[15px] dm-sans-text-500-italic '>{link.title}</a>
+              ))}
+            </div>
             <div className='h-[70%] prose prose-lg'>
               <div className='pb-6 mt-4 text-[#7C7C7C] text-lg dm-sans-text-regular' dangerouslySetInnerHTML={{__html: selectedProject.description}}/>
               <div className='flex justify-center items-center'>
@@ -354,12 +419,17 @@ const Projects = () => {
 
           {/* Modal Mobile */}
           <div className='flex md:hidden lg:hidden relative justify-center items-center flex-col bg-[#F4EFEB] p-3 w-full h-full overflow-y-auto scroll-container'>
-            <div className='mt-5 flex justify-center items-center w-[90%] h-[200px]'>
+            <div className='mt-20 flex justify-center items-center w-[90%] h-[200px]'>
             <img src={selectedProject.image} alt="" className='rounded-lg w-full h-full object-cover' />
             </div>
             <h3 className='mt-6 text-[#57808E] text-2xl dm-serif-display-regular-italic'>
               {selectedProject.title}
             </h3>
+            <div className='flex flex-col justify-center items-center'>
+              {selectedProject.links && selectedProject.links.map((link, index) => (
+                <a href={link.url} key={index} className='text-[#7C7C7C] text-[15px] dm-sans-text-500-italic '>{link.title}</a>
+              ))}
+            </div>
             <div className='h-[70%] prose prose-lg'>
               <div className='pb-6 mt-4 text-[#7C7C7C] text-lg dm-sans-text-regular' dangerouslySetInnerHTML={{__html: selectedProject.description}}/>
               <div className='flex justify-center items-center'>

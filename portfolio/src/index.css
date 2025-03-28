@@ -145,3 +145,8 @@
 .project-gradient {
   background: linear-gradient(227deg, rgba(217, 217, 217, 0.00) 26.07%, #2F4C70 100%);
 }
+
+
+.prose strong {
+  color: #7C7C7C;
+}
