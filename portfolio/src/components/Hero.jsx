@@ -22,6 +22,13 @@ const Hero = () => {
         }
     }, [windowHeight]);
 
+    const handleScrollToFooter = () => {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth",
+        });
+    }
+
   return (
     <div className={`bg-primary w-full flex justify-center items-center relative max-w-[2800px] mx-auto`}>
         
@@ -88,8 +95,8 @@ const Hero = () => {
                 <div className='w-[170px]  dm-sans-text-italic text-lightGray text-sm '>
                     Want to collaborate or just say hi Reach out!
                 </div>
-                <div className='border rounded-full border-lightGray w-[24px] h-[24px] flex justify-center items-center hover:bg-primary hover:scale-125 transition-transform'>
-                    <img src="/images/arrow_forward.png" alt="" className='text-black w-[24px] h-[24px]' />
+                <div onClick={handleScrollToFooter}  className='border rounded-full border-lightGray w-[24px] h-[24px] flex justify-center items-center hover:bg-primary hover:scale-125 transition-transform'>
+                    <img  src="/images/arrow_forward.png" alt="" className='text-black w-[24px] h-[24px]' />
                 </div>
             </div>
             </div>
@@ -156,7 +163,7 @@ const Hero = () => {
                     <div className='w-[170px]  dm-sans-text-italic text-lightGray text-sm '>
                         Want to collaborate or just say hi? Reach out!
                     </div>
-                    <div className='border rounded-full border-lightGray w-[24px] h-[24px] flex justify-center items-center hover:bg-primary hover:scale-125 transition-transform'>
+                    <div onClick={handleScrollToFooter} className='border rounded-full border-lightGray w-[24px] h-[24px] flex justify-center items-center hover:bg-primary hover:scale-125 transition-transform'>
                         <img src="/images/arrow_forward.png" alt="" className='text-black w-[24px] h-[24px]' />
                     </div>
                 </div>
@@ -218,10 +225,8 @@ const Hero = () => {
                         <div className='w-full flex items-center justify-end pr-[40px] h-full'>
                             <div className='dm-sans-text-italic text-lightGray text-xl w-[226px]'>Want to collaborate or say just hi? Reach out</div>
                             <div className={`border border-lightGray ${heightThreshold ? 'h-[125px]' : 'h-[60px]'} w-[1px] mr-[40px] ml-[10px]`}/>
-                            <div className='border rounded-full border-lightGray w-[39px] h-[39px] cursor-pointer justify-center flex items-center hover:bg-primary hover:scale-125 transition-transform'>
-                                <a href="https://www.linkedin.com/in/jasmin-ivy-fedilo-a5ab83247/" target="_blank">
-                                    <img src="/images/arrow_forward.png" alt="" className='text-black' />
-                                </a>
+                            <div  onClick={handleScrollToFooter} className='border rounded-full border-lightGray w-[39px] h-[39px] cursor-pointer justify-center flex items-center hover:bg-primary hover:scale-125 transition-transform'>
+                                <img src="/images/arrow_forward.png" alt="" className='text-black' />
                             </div>
                         </div>
                     </div>

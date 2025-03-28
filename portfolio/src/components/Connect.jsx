@@ -46,7 +46,7 @@ const Connect = () => {
         </div>
       </div>
       {/* Socials Mobile */}
-      <div className='absolute bottom-0 right-0 md:hidden'>
+      <div className='absolute bottom-0 right-0 md:hidden flex flex-col gap-1 mb-2'>
         {socials.map((social, index) => (
           <div key={index} className='flex items-center gap-2'>
             <div className='bg-white rounded-full h-[25px] flex justify-center items-center w-[25px]'>
