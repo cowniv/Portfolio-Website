@@ -1,6 +1,28 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 const Skills = () => {
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+  const [heightThreshold, setHeightThreshold] = useState(false);
+
+  useEffect(() => {
+      const handleResize = () => {
+          setWindowHeight(window.innerHeight);
+      };
+  
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+      if (windowHeight > 913) {
+          setHeightThreshold(true);
+      } else {
+          setHeightThreshold(false);
+      }
+  }, [windowHeight]);
+
+
+
   const skills = [
     {
       title: 'Frontend Development',
@@ -57,7 +79,7 @@ const Skills = () => {
             <div className='z-50 absolute left-1/2 top-[-1px] -translate-x-1/2 border border-blueSecondary w-[327px]'/>
             {skills.map((skill, idx) => (
               <div key={idx} className="mt-10">
-                <div className='h-32'>
+                <div className={`${heightThreshold ? 'h-20' : 'h-30'}`}>
                   <h1 className='text-[40px] text-blueSecondary dm-serif-display-regular-italic mb-5'>{skill.title}</h1>
                 </div>
                 <div className='flex flex-col justify-between w-[70%]'>
@@ -167,9 +189,9 @@ const Skills = () => {
                 </div>
                 <div className='flex flex-col justify-between w-[70%]'>
                   {skill.items.map((item, index) => (
-                    <div key={index} className='flex justify-between items-center w-[100px]'>
-                      <div className='flex-[0.2] bg-bluePrimary rounded-full w-4 h-4'>
-                        <img src="/images/check_small.png" alt="Check" className='object-contain w-full h-full' />
+                    <div key={index} className='flex justify-between items-center w-[120px]'>
+                      <div className='flex-[0.2] bg-bluePrimary rounded-full w-3 h-3'>
+                        <img src="/images/check_small.png" alt="Check" className='object-cover w-full h-full' />
                       </div>
                       <p className='pl-3 py-2 flex-[0.8] text-[12px] dm-sans-text-regular text-lightGray'>{item}</p>
                     </div>

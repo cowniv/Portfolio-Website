@@ -22,8 +22,6 @@ const Hero = () => {
         }
     }, [windowHeight]);
 
-    console.log(heightThreshold)
-
   return (
     <div className={`bg-primary w-full flex justify-center items-center relative max-w-[2800px] mx-auto`}>
         
@@ -62,8 +60,24 @@ const Hero = () => {
 
                 {/* Buttons */}
                 <div className='flex gap-2 mt-6'>
-                    <Button variant='primary' className={'px-[15px] text-[12px] rounded-full'}>Resume</Button>
-                    <Button variant='secondary' className={'px-[15px] text-[12px] rounded-full'}>Email</Button>
+                    <Button variant='primary' className={'px-[15px] text-[12px] rounded-full'}>
+                    <a 
+                        href="/JasminFediloCV.pdf" 
+                        download="JasminFediloCV.pdf" 
+                        className="block w-full h-full text-center"
+                    >
+                        Resume
+                    </a>
+                    </Button>
+                    <Button variant='secondary' className={'px-[15px] text-[12px] rounded-full'}>
+                        <a
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=jasminfedilo.pup@gmail.com"
+                            target="_blank"
+                            className="block w-full h-full text-center"
+                        >
+                            Email
+                        </a>
+                    </Button>
                 </div>
             </div>
             </div>
@@ -114,8 +128,24 @@ const Hero = () => {
 
                 {/* Buttons */}
                 <div className='flex gap-[14px] mt-6'>
-                <Button variant='primary' className={'px-[15px] text-[16px] rounded-full'}>Resume</Button>
-                <Button variant='secondary' className={'px-[15px] text-[16px] rounded-full'}>Email</Button>
+                <Button variant='primary' className={'px-[15px] text-[16px] rounded-full'}>
+                    <a 
+                        href="/JasminFediloCV.pdf" 
+                        download="JasminFediloCV.pdf" 
+                        className="block w-full h-full text-center"
+                    >
+                        Resume
+                    </a>
+                </Button>
+                <Button variant='secondary' className={'px-[15px] text-[16px] rounded-full'}>
+                    <a
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=jasminfedilo.pup@gmail.com"
+                        target="_blank"
+                        className="block w-full h-full text-center"
+                    >
+                        Email
+                    </a>
+                </Button>
                 </div>
             </div>
             </div>
