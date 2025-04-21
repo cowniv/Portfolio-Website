@@ -223,7 +223,7 @@ const Hero = () => {
                 <div className={`min-h-max ${heightThreshold ? 'h-[175px]' : 'h-[100px]'} bg-white w-full py-[10px]`}>
                     <div className='h-full justify-center items-center w-full'>
                         <div className='w-full flex items-center justify-end pr-[40px] h-full'>
-                            <div className='dm-sans-text-italic text-lightGray text-xl w-[226px]'>Want to collaborate or say just hi? Reach out</div>
+                            <div className='dm-sans-text-italic text-lightGray text-xl w-[226px]'>Want to collaborate or just say hi? Reach out!</div>
                             <div className={`border border-lightGray ${heightThreshold ? 'h-[125px]' : 'h-[60px]'} w-[1px] mr-[40px] ml-[10px]`}/>
                             <div  onClick={handleScrollToFooter} className='border rounded-full border-lightGray w-[39px] h-[39px] cursor-pointer justify-center flex items-center hover:bg-primary hover:scale-125 transition-transform'>
                                 <img src="/images/arrow_forward.png" alt="" className='text-black' />
