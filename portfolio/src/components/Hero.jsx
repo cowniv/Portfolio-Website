@@ -93,7 +93,7 @@ const Hero = () => {
             <div className='bg-white h-[75px] w-full py-6 px-4 justify-end flex'>
             <div className='w-[190px] flex items-center gap-3'>
                 <div className='w-[170px]  dm-sans-text-italic text-lightGray text-sm '>
-                    Want to collaborate or just say hi Reach out!
+                    Want to collaborate or just say hi? Reach out!
                 </div>
                 <div onClick={handleScrollToFooter}  className='border rounded-full border-lightGray w-[24px] h-[24px] flex justify-center items-center hover:bg-primary hover:scale-125 transition-transform'>
                     <img  src="/images/arrow_forward.png" alt="" className='text-black w-[24px] h-[24px]' />
